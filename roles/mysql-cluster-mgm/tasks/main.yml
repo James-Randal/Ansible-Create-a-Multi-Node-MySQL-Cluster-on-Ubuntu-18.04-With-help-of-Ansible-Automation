@@ -1,10 +1,10 @@
 - name: change the directory
-  shell: cd /home/ubuntu
+  shell: cd {{home}}/
   
 - name: Download binaries
   get_url: 
     url: https://dev.mysql.com/get/Downloads/MySQL-Cluster-7.6/mysql-cluster-community-management-server_7.6.6-1ubuntu18.04_amd64.deb
-    dest: /home/ubuntu
+    dest: {{home}}
 
 - name: install package
   command: dpkg -i mysql-cluster-community-management-server_7.6.6-1ubuntu18.04_amd64.deb
